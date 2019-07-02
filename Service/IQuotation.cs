@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    class IQuotation
+    public class IQuotation
     {
     }
 }
