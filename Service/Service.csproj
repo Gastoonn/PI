@@ -61,11 +61,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPackService.cs" />
-    <Compile Include="IProductService.cs" />
-    <Compile Include="PackService.cs" />
-    <Compile Include="ProductService.cs" />
+    <Compile Include="IQuotation.cs" />
+    <Compile Include="IShoppingCart.cs" />
+    <Compile Include="IStock.cs" />
+    <Compile Include="IStore.cs" />
+    <Compile Include="IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quotation.cs" />
+    <Compile Include="ShoppingCart.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj">
