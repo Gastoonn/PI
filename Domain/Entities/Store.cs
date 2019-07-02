@@ -15,7 +15,7 @@ namespace Domain.Entities
         public string Adresse { get; set; } 
         public string Tel { get; set; }
         public DateTime Horaire_ouverture { get; set; }
-        public int idStock { get; set; } //a verifier
+        public List<Stock> Stock { get; set; }
 
     }
 }

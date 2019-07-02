@@ -16,6 +16,7 @@ namespace WebClient.Models
         public float Price { get; set; }
         public List<ShoppingCartModel> ListPanierModel { get; set; }
         public List<PackViewModel> ListPack { get; set; }
-        public int idStock { get; set; } // a verifier
+        public List<Stock> Stock { get; set; }
+
     }
 }

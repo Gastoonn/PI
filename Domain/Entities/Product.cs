@@ -17,6 +17,6 @@ namespace Domain.Entities
         public float Price { get; set; }
         public List<ShoppingCart> ListPanier { get; set; }
         public List<Pack> ListPack { get; set; }
-        public int idStock { get; set; } // a verifier
+        public List<Stock> Stock { get; set; } 
     }
 }
