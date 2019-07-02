@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    class Client
+    public class Client
     {
+        public int id { get; set; }
+        public int idPanier { get; set; }
     }
 }

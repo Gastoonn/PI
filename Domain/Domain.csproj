@@ -63,7 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Client.cs" />
-    <Compile Include="Entities\Horaire_ouverture.cs" />
     <Compile Include="Entities\Invoice.cs" />
     <Compile Include="Entities\Pack.cs" />
     <Compile Include="Entities\Product.cs" />

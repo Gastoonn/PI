@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace Domain.Entities
+namespace WebClient.Models
 {
-    public class Store
+    public class StoreViewModel
     {
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Adresse { get; set; } 
+        public string Adresse { get; set; }
         public string Tel { get; set; }
         public DateTime Horaire_ouverture { get; set; }
-        public int idStock { get; set; } //a verifier
-
+        public StockViewModel idStock { get; set; } //a verifier
     }
 }

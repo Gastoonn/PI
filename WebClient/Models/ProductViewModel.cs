@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace Domain.Entities
+namespace WebClient.Models
 {
-    public class Product
+    public class ProductViewModel
     {
         [Key]
         public int Id { get; set; }
@@ -15,8 +14,8 @@ namespace Domain.Entities
         public string Category { get; set; }
         public int Quantity { get; set; }
         public float Price { get; set; }
-        public List<ShoppingCart> ListPanier { get; set; }
-        public List<Pack> ListPack { get; set; }
+        public List<ShoppingCartModel> ListPanierModel { get; set; }
+        public List<PackViewModel> ListPack { get; set; }
         public int idStock { get; set; } // a verifier
     }
 }

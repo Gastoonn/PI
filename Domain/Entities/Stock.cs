@@ -12,6 +12,8 @@ namespace Domain.Entities
         [Key]
         public int Id { get; set; }
         public int Quantity { get; set; }
+        public List<Product> ListPRoduct { get; set; }
+        public List<Store> ListStore { get; set; }
 
     }
 }

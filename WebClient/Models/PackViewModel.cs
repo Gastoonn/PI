@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace Domain.Entities
+namespace WebClient.Models
 {
-    public class Pack
+    public class PackViewModel
     {
         [Key]
         public int Id { get; set; }
@@ -16,8 +15,7 @@ namespace Domain.Entities
         public DateTime date_deb { get; set; }
         [DataType(DataType.DateTime)]
         public DateTime date_expiration { get; set; }
-        public List<ShoppingCart> ListPanier { get; set; }
-        public List<Product> ListProduct { get; set; }
-
+        public List<ShoppingCartModel> ListPanierModel { get; set; }
+        public List<ProductViewModel> ListProduct { get; set; }
     }
 }
