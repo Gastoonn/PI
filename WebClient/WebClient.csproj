@@ -236,10 +236,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Content\StoreController.cs" />
+    <Compile Include="Controllers\PackController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Controllers\QuotationController.cs" />
-    <Compile Include="Controllers\ShoppingCartController.cs" />
-    <Compile Include="Controllers\StockController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -321,10 +320,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\assets\" />
+    <Folder Include="Views\Pack\" />
     <Folder Include="Views\Product\" />
-    <Folder Include="Views\Quotation\" />
-    <Folder Include="Views\ShoppingCart\" />
-    <Folder Include="Views\Stock\" />
     <Folder Include="Views\Store\" />
   </ItemGroup>
   <ItemGroup>
