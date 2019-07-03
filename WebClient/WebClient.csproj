@@ -238,6 +238,9 @@
     <Compile Include="Content\StoreController.cs" />
     <Compile Include="Controllers\PackController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\QuotationController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\StockController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
