@@ -15,10 +15,10 @@ namespace WebClient.Controllers
         // GET: Stock
         public ActionResult Index()
         {
-            List<StockViewModel> list = new List<StockViewModel>();
+            List<Stock> list = new List<Stock>();
             foreach (var item in StockService.GetAll())
             {
-                StockViewModel AVM = new StockViewModel();
+                Stock AVM = new Stock();
                 AVM.idProduct = item.idProduct;
                 AVM.idStore = item.idStore;
                 AVM.Quantity = item.Quantity;
@@ -32,7 +32,7 @@ namespace WebClient.Controllers
         {
             Stock item = StockService.GetById(id);
 
-            StockViewModel AVM = new StockViewModel();
+            Stock AVM = new Stock();
             AVM.idProduct = item.idProduct;
             AVM.idStore = item.idStore;
             AVM.Quantity = item.Quantity;
@@ -75,7 +75,7 @@ namespace WebClient.Controllers
         {
             Stock item = StockService.GetById(id);
 
-            StockViewModel AVM = new StockViewModel();
+            Stock AVM = new Stock();
             AVM.idProduct = item.idProduct;
             AVM.idStore = item.idStore;
             AVM.Quantity = item.Quantity;
@@ -85,7 +85,7 @@ namespace WebClient.Controllers
 
         // POST: Stock/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, StockViewModel item)
+        public ActionResult Edit(int id, Stock item)
         {
             try
             {
@@ -113,7 +113,7 @@ namespace WebClient.Controllers
         {
             Stock item = StockService.GetById(id);
 
-            StockViewModel AVM = new StockViewModel();
+            Stock AVM = new Stock();
             AVM.idProduct = item.idProduct;
             AVM.idStore = item.idStore;
             AVM.Quantity = item.Quantity;

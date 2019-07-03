@@ -15,10 +15,10 @@ namespace WebClient.Controllers
         // GET: Store
         public ActionResult Index()
         {
-            List<StoreViewModel> list = new List<StoreViewModel>();
+            List<Store> list = new List<Store>();
             foreach (var item in StoreService.GetAll())
             {
-                StoreViewModel AVM = new StoreViewModel();
+                Store AVM = new Store();
                 AVM.Id = item.Id;
                 AVM.Adresse = item.Adresse;
                 AVM.Name = item.Name;
@@ -37,7 +37,7 @@ namespace WebClient.Controllers
         {
             Store item = StoreService.GetById(id);
 
-            StoreViewModel AVM = new StoreViewModel();
+            Store AVM = new Store();
             AVM.Id = item.Id;
             AVM.Adresse = item.Adresse;
             AVM.Name = item.Name;
@@ -84,7 +84,7 @@ namespace WebClient.Controllers
         public ActionResult Edit(int id)
         {
             Store item = StoreService.GetById(id);
-            StoreViewModel AVM = new StoreViewModel();
+            Store AVM = new Store();
             AVM.Id = item.Id;
             AVM.Adresse = item.Adresse;
             AVM.Name = item.Name;
@@ -97,7 +97,7 @@ namespace WebClient.Controllers
 
         // POST: Store/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, StoreViewModel AVM)
+        public ActionResult Edit(int id, Store AVM)
         {
             try
             {
@@ -126,7 +126,7 @@ namespace WebClient.Controllers
         public ActionResult Delete(int id)
         {
             Store item = StoreService.GetById(id);
-            StoreViewModel AVM = new StoreViewModel();
+            Store AVM = new Store();
             AVM.Id = item.Id;
             AVM.Adresse = item.Adresse;
             AVM.Name = item.Name;
