@@ -96,6 +96,7 @@
   <ItemGroup>
     <Compile Include="Configurations\StockConfiguration.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="Conventions\DateTimeConvention.cs" />
     <Compile Include="Infrastructure\DatabaseFactory.cs" />
     <Compile Include="Infrastructure\Disposable.cs" />
     <Compile Include="Infrastructure\IDatabaseFactory .cs" />
@@ -124,9 +125,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Conventions\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201907021823540_first.resx">
       <DependentUpon>201907021823540_first.cs</DependentUpon>
