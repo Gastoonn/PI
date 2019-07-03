@@ -246,6 +246,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907031713293_v1.cs" />
+    <Compile Include="Migrations\201907031713293_v1.Designer.cs">
+      <DependentUpon>201907031713293_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -325,6 +330,14 @@
     <Content Include="Views\TheStore\Create.cshtml" />
     <Content Include="Views\Quotation\Create.cshtml" />
     <Content Include="Views\ShoppingCart\Create.cshtml" />
+    <Content Include="Views\TheStore\Index.cshtml" />
+    <Content Include="Views\TheStore\Details.cshtml" />
+    <Content Include="Views\TheStore\Edit.cshtml" />
+    <Content Include="Views\TheStore\Delete.cshtml" />
+    <Content Include="Views\Stock\Index.cshtml" />
+    <Content Include="Views\Stock\Details.cshtml" />
+    <Content Include="Views\Stock\Edit.cshtml" />
+    <Content Include="Views\Stock\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -351,6 +364,11 @@
       <Project>{7e8e15cb-eb9e-484e-b0e9-4aaf566f5fff}</Project>
       <Name>Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907031713293_v1.resx">
+      <DependentUpon>201907031713293_v1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
