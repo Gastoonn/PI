@@ -9,7 +9,7 @@ using WebClient.Models;
 
 namespace WebClient.Controllers
 {
-    public class StoreController : Controller
+    public class TheStoreController : Controller
     {
         IStoreService StoreService = new StoreService();
         // GET: Store
@@ -25,7 +25,7 @@ namespace WebClient.Controllers
                 AVM.Tel = item.Tel;
                 AVM.Horaire_ouverture = item.Horaire_ouverture;
                 AVM.Stock = item.Stock;
-                             
+
 
                 list.Add(AVM);
             }
@@ -54,7 +54,7 @@ namespace WebClient.Controllers
         }
 
         // POST: Store/Create
-       
+
         [HttpPost]
         public ActionResult Create(StoreViewModel AVM)
         {
@@ -62,10 +62,10 @@ namespace WebClient.Controllers
             {
                 // TODO: Add insert logic here
                 Store A = new Store();
-                    A.Id = AVM.Id;
+                A.Id = AVM.Id;
                 A.Adresse = AVM.Adresse;
-                    A.Name = AVM.Name;
-                    A.Tel = AVM.Tel;
+                A.Name = AVM.Name;
+                A.Tel = AVM.Tel;
                 A.Horaire_ouverture = AVM.Horaire_ouverture;
                 A.Stock = AVM.Stock;
 

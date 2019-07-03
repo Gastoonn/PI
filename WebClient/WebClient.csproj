@@ -241,7 +241,7 @@
     <Compile Include="Controllers\QuotationController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\StockController.cs" />
-    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Controllers\TheStoreController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -319,6 +319,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Quotation\Index.cshtml" />
+    <Content Include="Views\Quotation\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -326,6 +328,7 @@
     <Folder Include="Views\Pack\" />
     <Folder Include="Views\Product\" />
     <Folder Include="Views\Store\" />
+    <Folder Include="Views\TheStore\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

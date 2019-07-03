@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace WebClient.Models
         public DateTime date_deb { get; set; }
         [DataType(DataType.DateTime)]
         public DateTime date_expiration { get; set; }
-        public List<ShoppingCartModel> ListPanierModel { get; set; }
-        public List<ProductViewModel> ListProduct { get; set; }
+        public List<ShoppingCart> ListPanierModel { get; set; }
+        public List<Product> ListProduct { get; set; }
     }
 }

@@ -104,13 +104,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201907021823540_first.cs" />
-    <Compile Include="Migrations\201907021823540_first.Designer.cs">
-      <DependentUpon>201907021823540_first.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201907021824590_first1.cs" />
-    <Compile Include="Migrations\201907021824590_first1.Designer.cs">
-      <DependentUpon>201907021824590_first1.cs</DependentUpon>
+    <Compile Include="Migrations\201907030137238_fluentAPI.cs" />
+    <Compile Include="Migrations\201907030137238_fluentAPI.Designer.cs">
+      <DependentUpon>201907030137238_fluentAPI.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -125,13 +121,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907021823540_first.resx">
-      <DependentUpon>201907021823540_first.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907021824590_first1.resx">
-      <DependentUpon>201907021824590_first1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907030137238_fluentAPI.resx">
+      <DependentUpon>201907030137238_fluentAPI.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
