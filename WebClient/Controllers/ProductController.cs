@@ -53,11 +53,20 @@ namespace WebClient.Controllers
 
         // POST: Product/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(ProductViewModel AVM)
         {
             try
             {
                 // TODO: Add insert logic here
+                Product A = new Product();
+                A.Id = AVM.Id;
+                A.Model = AVM.Model;
+                A.Category = AVM.Category;
+                A.Quantity = AVM.Quantity;
+                A.Price = AVM.Price;
+
+                ProductService.Add(A);
+                ProductService.Commit();
 
                 return RedirectToAction("Index");
             }
@@ -70,16 +79,33 @@ namespace WebClient.Controllers
         // GET: Product/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Product item = ProductService.GetById(id);
+            ProductViewModel AVM = new ProductViewModel();
+            AVM.Id = item.Id;
+            AVM.Model = item.Model;
+            AVM.Category = item.Category;
+            AVM.Quantity = item.Quantity;
+            AVM.Price = item.Price;
+
+            return View(AVM);
         }
 
         // POST: Product/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, ProductViewModel AVM)
         {
             try
             {
                 // TODO: Add update logic here
+                Product A = ProductService.GetById(id);
+                A.Id = AVM.Id;
+                A.Model = AVM.Model;
+                A.Category = AVM.Category;
+                A.Quantity = AVM.Quantity;
+                A.Price = AVM.Price;
+
+                ProductService.Update(A);
+                ProductService.Commit();
 
                 return RedirectToAction("Index");
             }
@@ -92,7 +118,15 @@ namespace WebClient.Controllers
         // GET: Product/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Product item = ProductService.GetById(id);
+            ProductViewModel AVM = new ProductViewModel();
+            AVM.Id = item.Id;
+            AVM.Model = item.Model;
+            AVM.Category = item.Category;
+            AVM.Quantity = item.Quantity;
+            AVM.Price = item.Price;
+
+            return View(AVM);
         }
 
         // POST: Product/Delete/5
@@ -102,6 +136,9 @@ namespace WebClient.Controllers
             try
             {
                 // TODO: Add delete logic here
+
+                ProductService.Delete(ProductService.GetById(id));
+                ProductService.Commit();
 
                 return RedirectToAction("Index");
             }
