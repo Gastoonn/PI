@@ -324,7 +324,15 @@
     <Content Include="Views\Stock\Create.cshtml" />
     <Content Include="Views\TheStore\Create.cshtml" />
     <Content Include="Views\Quotation\Create.cshtml" />
+    <Content Include="Views\Quotation\Details.cshtml" />
+    <Content Include="Views\Quotation\Edit.cshtml" />
+    <Content Include="Views\Quotation\Delete.cshtml" />
+    <Content Include="Views\Quotation\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\Details.cshtml" />
     <Content Include="Views\ShoppingCart\Create.cshtml" />
+    <Content Include="Views\ShoppingCart\Edit.cshtml" />
+    <Content Include="Views\ShoppingCart\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -15,10 +15,12 @@ namespace WebClient.Controllers
         // GET: Quotation
         public ActionResult Index()
         {
-            List<QuotationViewModel> list = new List<QuotationViewModel>();
+            List<Quotation> list = new List<Quotation>();
+            //List<QuotationViewModel> list = new List<QuotationViewModel>();
             foreach (var item in QuotationService.GetAll())
             {
-                QuotationViewModel AVM = new QuotationViewModel();
+                //QuotationViewModel AVM = new QuotationViewModel();
+                Quotation AVM = new Quotation();
                 AVM.Id = item.Id;
                 AVM.Date_expiration = item.Date_expiration;
                 AVM.QuoteNo = item.QuoteNo;
@@ -35,7 +37,7 @@ namespace WebClient.Controllers
         {
             Quotation item = QuotationService.GetById(id);
 
-            QuotationViewModel AVM = new QuotationViewModel();
+            Quotation AVM = new Quotation ();
             AVM.Id = item.Id;
             AVM.Date_expiration = item.Date_expiration;
             AVM.QuoteNo = item.QuoteNo;
@@ -82,7 +84,7 @@ namespace WebClient.Controllers
         {
             Quotation item = QuotationService.GetById(id);
 
-            QuotationViewModel AVM = new QuotationViewModel();
+            Quotation AVM = new Quotation();
             AVM.Id = item.Id;
             AVM.Date_expiration = item.Date_expiration;
             AVM.QuoteNo = item.QuoteNo;
@@ -94,7 +96,7 @@ namespace WebClient.Controllers
 
         // POST: Quotation/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, QuotationViewModel item)
+        public ActionResult Edit(int id, Quotation item)
         {
             try
             {
@@ -122,7 +124,7 @@ namespace WebClient.Controllers
         {
             Quotation item = QuotationService.GetById(id);
 
-            QuotationViewModel AVM = new QuotationViewModel();
+            Quotation AVM = new Quotation();
             AVM.Id = item.Id;
             AVM.Date_expiration = item.Date_expiration;
             AVM.QuoteNo = item.QuoteNo;
