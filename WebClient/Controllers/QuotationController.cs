@@ -53,7 +53,7 @@ namespace WebClient.Controllers
 
         // POST: Quotation/Create
         [HttpPost]
-        public ActionResult Create(Quotation item)
+        public ActionResult Create(QuotationViewModel item)
         {
             try
             {

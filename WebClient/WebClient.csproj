@@ -319,16 +319,16 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Quotation\Index.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Pack\Create.cshtml" />
+    <Content Include="Views\Stock\Create.cshtml" />
+    <Content Include="Views\TheStore\Create.cshtml" />
     <Content Include="Views\Quotation\Create.cshtml" />
+    <Content Include="Views\ShoppingCart\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\assets\" />
-    <Folder Include="Views\Pack\" />
-    <Folder Include="Views\Product\" />
-    <Folder Include="Views\Store\" />
-    <Folder Include="Views\TheStore\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
