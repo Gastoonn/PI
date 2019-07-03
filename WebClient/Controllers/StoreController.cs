@@ -24,6 +24,7 @@ namespace WebClient.Controllers
                 AVM.Name = item.Name;
                 AVM.Tel = item.Tel;
                 AVM.Horaire_ouverture = item.Horaire_ouverture;
+                AVM.Stock = item.Stock;
                              
 
                 list.Add(AVM);
@@ -42,6 +43,7 @@ namespace WebClient.Controllers
             AVM.Name = item.Name;
             AVM.Tel = item.Tel;
             AVM.Horaire_ouverture = item.Horaire_ouverture;
+            AVM.Stock = item.Stock;
             return View();
         }
 
@@ -65,6 +67,7 @@ namespace WebClient.Controllers
                     A.Name = AVM.Name;
                     A.Tel = AVM.Tel;
                 A.Horaire_ouverture = AVM.Horaire_ouverture;
+                A.Stock = AVM.Stock;
 
                 StoreService.Add(A);
                 StoreService.Commit();
@@ -87,6 +90,7 @@ namespace WebClient.Controllers
             AVM.Name = item.Name;
             AVM.Tel = item.Tel;
             AVM.Horaire_ouverture = item.Horaire_ouverture;
+            AVM.Stock = item.Stock;
 
             return View();
         }
@@ -104,6 +108,7 @@ namespace WebClient.Controllers
                 A.Name = AVM.Name;
                 A.Tel = AVM.Tel;
                 A.Horaire_ouverture = AVM.Horaire_ouverture;
+                A.Stock = AVM.Stock;
 
                 StoreService.Update(A);
                 StoreService.Commit();
@@ -127,6 +132,7 @@ namespace WebClient.Controllers
             AVM.Name = item.Name;
             AVM.Tel = item.Tel;
             AVM.Horaire_ouverture = item.Horaire_ouverture;
+            AVM.Stock = item.Stock;
 
             return View(AVM);
         }
