@@ -66,6 +66,7 @@
     <Compile Include="Entities\Invoice.cs" />
     <Compile Include="Entities\Pack.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Prospect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Quotation.cs" />
     <Compile Include="Entities\Reclamation.cs" />

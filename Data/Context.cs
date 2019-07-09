@@ -27,6 +27,7 @@ namespace Data
         public DbSet<Stock> Stock { get; set; }
         public DbSet<Store> Store { get; set; }
         public DbSet<User> User { get; set; }
+        public DbSet<Prospect> Prospect { get; set; }
 
 
 
