@@ -1,10 +1,11 @@
-﻿using Domain.Entities;
+﻿ using Domain.Entities;
 using Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebClient.Models;
 
 namespace WebClient.Controllers
 {
@@ -21,9 +22,9 @@ namespace WebClient.Controllers
                 AVM.Address = item.Address;
                 AVM.DateDebut = item.DateDebut;
                 AVM.DateFin = item.DateFin;
-                AVM.MatriculeAgents = item.MatriculeAgents;
-                AVM.ProspectNumber = item.ProspectNumber;
-                AVM.Vehicules = item.Vehicules;
+                AVM.MatriculeChefCampagne = item.MatriculeChefCampagne;
+                AVM.MatriculeVehicule = item.MatriculeVehicule;
+                AVM.id = item.id;
 
                 list.Add(AVM);
             }
@@ -39,9 +40,9 @@ namespace WebClient.Controllers
             AVM.Address = item.Address;
             AVM.DateDebut = item.DateDebut;
             AVM.DateFin = item.DateFin;
-            AVM.MatriculeAgents = item.MatriculeAgents;
-            AVM.ProspectNumber = item.ProspectNumber;
-            AVM.Vehicules = item.Vehicules;
+            AVM.MatriculeChefCampagne = item.MatriculeChefCampagne;
+            AVM.MatriculeVehicule = item.MatriculeVehicule;
+            AVM.id = item.id;
 
             return View(AVM);
         }
@@ -64,9 +65,9 @@ namespace WebClient.Controllers
                 AVM.Address = item.Address;
                 AVM.DateDebut = item.DateDebut;
                 AVM.DateFin = item.DateFin;
-                AVM.MatriculeAgents = item.MatriculeAgents;
-                AVM.ProspectNumber = item.ProspectNumber;
-                AVM.Vehicules = item.Vehicules;
+                AVM.MatriculeChefCampagne = item.MatriculeChefCampagne;
+                AVM.MatriculeVehicule = item.MatriculeVehicule;
+                AVM.id = item.id;
 
                 ProspectService.Add(AVM);
                 ProspectService.Commit();
@@ -88,9 +89,9 @@ namespace WebClient.Controllers
             AVM.Address = item.Address;
             AVM.DateDebut = item.DateDebut;
             AVM.DateFin = item.DateFin;
-            AVM.MatriculeAgents = item.MatriculeAgents;
-            AVM.ProspectNumber = item.ProspectNumber;
-            AVM.Vehicules = item.Vehicules;
+            AVM.MatriculeChefCampagne = item.MatriculeChefCampagne;
+            AVM.MatriculeVehicule = item.MatriculeVehicule;
+            AVM.id = item.id;
 
             return View(AVM);
         }
@@ -106,8 +107,9 @@ namespace WebClient.Controllers
                 AVM.Address = item.Address;
                 AVM.DateDebut = item.DateDebut;
                 AVM.DateFin = item.DateFin;
-                AVM.MatriculeAgents = item.MatriculeAgents;
-                AVM.Vehicules = item.Vehicules;
+                AVM.MatriculeChefCampagne = item.MatriculeChefCampagne;
+                AVM.MatriculeVehicule = item.MatriculeVehicule;
+                
 
                 ProspectService.Update(AVM);
                 ProspectService.Commit();
@@ -129,9 +131,9 @@ namespace WebClient.Controllers
             AVM.Address = item.Address;
             AVM.DateDebut = item.DateDebut;
             AVM.DateFin = item.DateFin;
-            AVM.MatriculeAgents = item.MatriculeAgents;
-            AVM.ProspectNumber = item.ProspectNumber;
-            AVM.Vehicules = item.Vehicules;
+            AVM.MatriculeChefCampagne = item.MatriculeChefCampagne;
+            AVM.MatriculeVehicule = item.MatriculeVehicule;
+            AVM.id = item.id;
 
             return View(AVM);
         }

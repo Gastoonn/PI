@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace Domain.Entities
+namespace WebClient.Models
 {
-    public class Prospect
+    public class ProspectViewModel
     {
         public int id { get; set; }
         public string Address { get; set; }

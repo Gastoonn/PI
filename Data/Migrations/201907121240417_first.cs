@@ -3,7 +3,7 @@ namespace Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class fluentAPI : DbMigration
+    public partial class first : DbMigration
     {
         public override void Up()
         {
@@ -22,7 +22,7 @@ namespace Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Total = c.Single(nullable: false),
-                        Date_invoice = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        Date_invoice = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -32,8 +32,8 @@ namespace Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Price = c.Single(nullable: false),
-                        date_deb = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        date_expiration = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        date_deb = c.DateTime(nullable: false),
+                        date_expiration = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -76,12 +76,23 @@ namespace Data.Migrations
                 .Index(t => t.Store_Id);
             
             CreateTable(
+                "dbo.Prospects",
+                c => new
+                    {
+                        id = c.Int(nullable: false, identity: true),
+                        Address = c.String(),
+                        DateDebut = c.DateTime(nullable: false),
+                        DateFin = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.id);
+            
+            CreateTable(
                 "dbo.Quotations",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Total = c.Single(nullable: false),
-                        Date_expiration = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        Date_expiration = c.DateTime(nullable: false),
                         TVA = c.Single(nullable: false),
                         QuoteNo = c.String(),
                     })
@@ -103,7 +114,7 @@ namespace Data.Migrations
                         Name = c.String(),
                         Adresse = c.String(),
                         Tel = c.String(),
-                        Horaire_ouverture = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        Horaire_ouverture = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -118,7 +129,7 @@ namespace Data.Migrations
                         Email = c.String(),
                         Tel = c.String(),
                         Adresse = c.String(),
-                        Date_birth = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        Date_birth = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -188,6 +199,7 @@ namespace Data.Migrations
             DropTable("dbo.Stores");
             DropTable("dbo.Reclamations");
             DropTable("dbo.Quotations");
+            DropTable("dbo.Prospects");
             DropTable("dbo.Stocks");
             DropTable("dbo.Products");
             DropTable("dbo.ShoppingCarts");

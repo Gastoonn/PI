@@ -8,8 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Data
 {
+   // [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class Context : DbContext
     {
         public Context() : base("name=BD") //BD le meme que le nom dans name="" de <connection string> dans Web.config
@@ -35,7 +37,7 @@ namespace Data
         {
             // Ajouter  les Conventions et configurations qui ont été créées ici : 
             //Conventions :
-             modelBuilder.Conventions.Add(new DateTimeConvention());
+             //modelBuilder.Conventions.Add(new DateTimeConvention());
             //Configuration :
              modelBuilder.Configurations.Add(new StockConfiguration());
 

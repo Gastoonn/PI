@@ -1,0 +1,58 @@
+﻿@model Domain.Entities.Prospect
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Prospect</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatriculeVehicule)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatriculeVehicule)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatriculeChefCampagne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatriculeChefCampagne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateDebut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateDebut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateFin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateFin)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
