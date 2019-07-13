@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Data.Infrastructure;
+using Domain.Entities;
 using ServicePatern;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,7 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-   public  interface IShoppingCartService : IService<ShoppingCart>
+    public interface IClientService:IService<Client>
     {
-         void setIdPanier();
     }
 }

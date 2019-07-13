@@ -12,8 +12,13 @@ namespace Domain.Entities
         [Key]
         public int Id { get; set; }
         public int idCLient { get; set; }
-        public List<Product> ListProduct { get; set; }
-        public List<Pack> ListPack { get; set; }
+        public int idProduct { get; set; }
+        public int Quantite { get; set; }
+        public bool IsAPack { get; set; }
         public int idQuotation { get; set; }
+        public ShoppingCart()
+        {
+            this.IsAPack = false;
+        }
     }
 }

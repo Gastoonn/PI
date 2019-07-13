@@ -3,7 +3,7 @@ namespace Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class first : DbMigration
+    public partial class TestPan : DbMigration
     {
         public override void Up()
         {
@@ -12,6 +12,13 @@ namespace Data.Migrations
                 c => new
                     {
                         id = c.Int(nullable: false, identity: true),
+                        nom = c.String(),
+                        prenom = c.String(),
+                        telephone = c.String(),
+                        email = c.String(),
+                        adresse = c.String(),
+                        login = c.String(),
+                        password = c.String(),
                         idPanier = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.id);
@@ -81,6 +88,8 @@ namespace Data.Migrations
                     {
                         id = c.Int(nullable: false, identity: true),
                         Address = c.String(),
+                        MatriculeVehicule = c.String(),
+                        MatriculeChefCampagne = c.Int(nullable: false),
                         DateDebut = c.DateTime(nullable: false),
                         DateFin = c.DateTime(nullable: false),
                     })

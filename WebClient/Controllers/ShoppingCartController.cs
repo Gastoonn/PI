@@ -20,10 +20,11 @@ namespace WebClient.Controllers
             {
                 ShoppingCart AVM = new ShoppingCart();
                 AVM.Id = item.Id;
-                AVM.idQuotation = item.idQuotation;
                 AVM.idCLient = item.idCLient;
-                AVM.ListProduct = item.ListProduct;
-                AVM.ListPack = item.ListPack;
+                AVM.idProduct = item.idProduct;
+                AVM.Quantite = item.Quantite;
+                AVM.IsAPack = item.IsAPack;
+                AVM.idQuotation = item.idQuotation;
                 list.Add(AVM);
             }
             return View(list);
@@ -36,10 +37,11 @@ namespace WebClient.Controllers
 
             ShoppingCart AVM = new ShoppingCart();
             AVM.Id = item.Id;
-            AVM.idQuotation = item.idQuotation;
             AVM.idCLient = item.idCLient;
-            AVM.ListProduct = item.ListProduct;
-            AVM.ListPack = item.ListPack;
+            AVM.idProduct = item.idProduct;
+            AVM.Quantite = item.Quantite;
+            AVM.IsAPack = item.IsAPack;
+            AVM.idQuotation = item.idQuotation;
 
             return View(AVM);
         }
@@ -59,10 +61,11 @@ namespace WebClient.Controllers
                 // TODO: Add insert logic here
                 ShoppingCart A = new ShoppingCart();
                 A.Id = AVM.Id;
-                A.idQuotation = AVM.idQuotation;
                 A.idCLient = AVM.idCLient;
-                A.ListProduct = AVM.ListProductModel;
-                A.ListPack = AVM.ListPackModel; 
+                A.idProduct = AVM.idProduct;
+                A.Quantite = AVM.Quantite;
+                A.IsAPack = AVM.IsAPack;
+                A.idQuotation = AVM.idQuotation;
 
 
                 ShoppingCartService.Add(A);
@@ -83,10 +86,11 @@ namespace WebClient.Controllers
 
             ShoppingCart AVM = new ShoppingCart();
             AVM.Id = item.Id;
-            AVM.idQuotation = item.idQuotation;
             AVM.idCLient = item.idCLient;
-            AVM.ListProduct = item.ListProduct;
-            AVM.ListPack = item.ListPack;
+            AVM.idProduct = item.idProduct;
+            AVM.Quantite = item.Quantite;
+            AVM.IsAPack = item.IsAPack;
+            AVM.idQuotation = item.idQuotation;
 
             return View(AVM);
         }
@@ -102,10 +106,11 @@ namespace WebClient.Controllers
                 ShoppingCart A = ShoppingCartService.GetById(id);
 
                 A.Id = AVM.Id;
-                A.idQuotation = AVM.idQuotation;
                 A.idCLient = AVM.idCLient;
-                A.ListProduct = AVM.ListProductModel;
-                A.ListPack = AVM.ListPackModel;
+                A.idProduct = AVM.idProduct;
+                A.Quantite = AVM.Quantite;
+                A.IsAPack = AVM.IsAPack;
+                A.idQuotation = AVM.idQuotation;
 
 
                 ShoppingCartService.Update(A);
@@ -128,10 +133,11 @@ namespace WebClient.Controllers
 
             ShoppingCart AVM = new ShoppingCart();
             AVM.Id = item.Id;
-            AVM.idQuotation = item.idQuotation;
             AVM.idCLient = item.idCLient;
-            AVM.ListProduct = item.ListProduct;
-            AVM.ListPack = item.ListPack;
+            AVM.idProduct = item.idProduct;
+            AVM.Quantite = item.Quantite;
+            AVM.IsAPack = item.IsAPack;
+            AVM.idQuotation = item.idQuotation;
 
             return View(AVM);
         }

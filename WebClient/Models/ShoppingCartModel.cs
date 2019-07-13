@@ -9,11 +9,11 @@ namespace WebClient.Models
 {
     public class ShoppingCartModel
     {
-        [Key]
         public int Id { get; set; }
         public int idCLient { get; set; }
-        public List<Product> ListProductModel { get; set; }
-        public List<Pack> ListPackModel { get; set; }
+        public int idProduct { get; set; }
+        public bool IsAPack { get; set; }
+        public int Quantite { get; set; } 
         public int idQuotation { get; set; }
     }
 }

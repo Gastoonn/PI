@@ -86,6 +86,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientService.cs" />
+    <Compile Include="IClientService.cs" />
     <Compile Include="IPackService.cs" />
     <Compile Include="IProductService.cs" />
     <Compile Include="IProspectService.cs" />

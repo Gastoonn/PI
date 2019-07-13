@@ -258,6 +258,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Content\StoreController.cs" />
     <Compile Include="Controllers\PackController.cs" />
@@ -273,6 +274,7 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ClientViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\PackViewModel.cs" />
     <Compile Include="Models\ProductViewModel.cs" />
@@ -356,11 +358,6 @@
     <Content Include="Views\Quotation\Edit.cshtml" />
     <Content Include="Views\Quotation\Delete.cshtml" />
     <Content Include="Views\Quotation\Index.cshtml" />
-    <Content Include="Views\ShoppingCart\Index.cshtml" />
-    <Content Include="Views\ShoppingCart\Details.cshtml" />
-    <Content Include="Views\ShoppingCart\Create.cshtml" />
-    <Content Include="Views\ShoppingCart\Edit.cshtml" />
-    <Content Include="Views\ShoppingCart\Delete.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
@@ -384,10 +381,14 @@
     <Content Include="Views\Prospect\Details.cshtml" />
     <Content Include="Views\Prospect\Edit.cshtml" />
     <Content Include="Views\Prospect\Delete.cshtml" />
+    <Content Include="Views\Client\Create.cshtml" />
+    <Content Include="Views\Client\Edit.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\assets\" />
+    <Folder Include="Views\ShoppingCart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
