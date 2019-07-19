@@ -17,15 +17,21 @@ namespace WebClient.Controllers
         {
             List<ShoppingCart> list = new List<ShoppingCart>();
             foreach (var item in ShoppingCartService.GetAll())
-            {
-                ShoppingCart AVM = new ShoppingCart();
-                AVM.Id = item.Id;
-                AVM.idCLient = item.idCLient;
-                AVM.idProduct = item.idProduct;
-                AVM.Quantite = item.Quantite;
-                AVM.IsAPack = item.IsAPack;
-                AVM.idQuotation = item.idQuotation;
-                list.Add(AVM);
+            {   
+                if (item.Id == 1) // normalement item.Id == CurrentUser.id mais vue la gestion des users
+                                  //  n'est pas encore terminé par Hassen je dois mettre un id statique
+                {
+                    ShoppingCart AVM = new ShoppingCart();
+                    AVM.Id = item.Id;
+                    AVM.idCLient = item.idCLient;
+                    AVM.idProduct = item.idProduct;
+                    AVM.Quantite = item.Quantite;
+                    AVM.IsAPack = item.IsAPack;
+                    AVM.idQuotation = item.idQuotation;
+                    list.Add(AVM);
+                }
+               
+
             }
             return View(list);
         }
@@ -46,23 +52,28 @@ namespace WebClient.Controllers
             return View(AVM);
         }
 
-        // GET: ShoppingCart/Create
-        public ActionResult Create()
+        // GET: ShoppingCart/Create/{idProd}
+        public ActionResult Create(int id)
         {
-            return View();
+            ShoppingCart AVM = new ShoppingCart();
+            AVM.idCLient = 1; //A.idCLient = AVM.idCLient;
+            AVM.idProduct = id;
+            
+
+            return View(AVM);
         }
 
-        // POST: ShoppingCart/Create
+        // POST: ShoppingCart/Create/5
         [HttpPost]
-        public ActionResult Create(ShoppingCartModel AVM)
+        public ActionResult Create(ShoppingCartModel AVM,int idProd)
         {
             try
             {
                 // TODO: Add insert logic here
                 ShoppingCart A = new ShoppingCart();
                 A.Id = AVM.Id;
-                A.idCLient = AVM.idCLient;
-                A.idProduct = AVM.idProduct;
+                A.idCLient = 1; //A.idCLient = AVM.idCLient;
+                A.idProduct = idProd;
                 A.Quantite = AVM.Quantite;
                 A.IsAPack = AVM.IsAPack;
                 A.idQuotation = AVM.idQuotation;

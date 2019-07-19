@@ -132,6 +132,10 @@
     <Compile Include="Migrations\201907121654444_TestPan.Designer.cs">
       <DependentUpon>201907121654444_TestPan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907171751065_Update2.cs" />
+    <Compile Include="Migrations\201907171751065_Update2.Designer.cs">
+      <DependentUpon>201907171751065_Update2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -148,6 +152,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201907121654444_TestPan.resx">
       <DependentUpon>201907121654444_TestPan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907171751065_Update2.resx">
+      <DependentUpon>201907171751065_Update2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
