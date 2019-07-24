@@ -20,5 +20,6 @@ namespace WebClient.Models
         public string password { get; set; }
 
         public int idPanier { get; set; }
+        public List<Reclamation> Reclamations { get; set; }
     }
 }

@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace Domain.Entities
+namespace WebClient.Models
 {
-    public class Reclamation
+    public class ReclamationViewModel
     {
         [Key]
         [Column(Order = 0)]

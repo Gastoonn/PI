@@ -1,0 +1,67 @@
+﻿@model Domain.Entities.Reclamation
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reclamation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dateReclamation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateReclamation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategorieReclamation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategorieReclamation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SujetReclamation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SujetReclamation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.textReclamation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.textReclamation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EtatReclamation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EtatReclamation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

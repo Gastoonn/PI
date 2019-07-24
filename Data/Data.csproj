@@ -128,13 +128,17 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201907121654444_TestPan.cs" />
-    <Compile Include="Migrations\201907121654444_TestPan.Designer.cs">
-      <DependentUpon>201907121654444_TestPan.cs</DependentUpon>
+    <Compile Include="Migrations\201907240106195_update6.cs" />
+    <Compile Include="Migrations\201907240106195_update6.Designer.cs">
+      <DependentUpon>201907240106195_update6.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907171751065_Update2.cs" />
-    <Compile Include="Migrations\201907171751065_Update2.Designer.cs">
-      <DependentUpon>201907171751065_Update2.cs</DependentUpon>
+    <Compile Include="Migrations\201907241353216_update7.cs" />
+    <Compile Include="Migrations\201907241353216_update7.Designer.cs">
+      <DependentUpon>201907241353216_update7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907241610522_update8.cs" />
+    <Compile Include="Migrations\201907241610522_update8.Designer.cs">
+      <DependentUpon>201907241610522_update8.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,11 +154,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907121654444_TestPan.resx">
-      <DependentUpon>201907121654444_TestPan.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907240106195_update6.resx">
+      <DependentUpon>201907240106195_update6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907171751065_Update2.resx">
-      <DependentUpon>201907171751065_Update2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907241353216_update7.resx">
+      <DependentUpon>201907241353216_update7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907241610522_update8.resx">
+      <DependentUpon>201907241610522_update8.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

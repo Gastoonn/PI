@@ -15,26 +15,24 @@ namespace WebClient.Controllers
         // GET: ShoppingCart
         public ActionResult Index()
         {
+            // Debug.WriteLine("Ici =>");
             List<ShoppingCart> list = new List<ShoppingCart>();
             foreach (var item in ShoppingCartService.GetAll())
-            {   
-                if (item.Id == 1) // normalement item.Id == CurrentUser.id mais vue la gestion des users
-                                  //  n'est pas encore terminé par Hassen je dois mettre un id statique
-                {
-                    ShoppingCart AVM = new ShoppingCart();
-                    AVM.Id = item.Id;
-                    AVM.idCLient = item.idCLient;
-                    AVM.idProduct = item.idProduct;
-                    AVM.Quantite = item.Quantite;
-                    AVM.IsAPack = item.IsAPack;
-                    AVM.idQuotation = item.idQuotation;
-                    list.Add(AVM);
-                }
-               
+            {
+                //   Debug.WriteLine(item.ToString());
+                ShoppingCart AVM = new ShoppingCart();
+                AVM.Id = item.Id;
+                AVM.idCLient = item.idCLient;
+                AVM.idProduct = item.idProduct;
+                AVM.idQuotation = item.idQuotation;
+                AVM.Quantite = item.Quantite;
+                AVM.IsAPack = item.IsAPack;
 
+                list.Add(AVM);
             }
             return View(list);
         }
+         
 
         // GET: ShoppingCart/Details/5
         public ActionResult Details(int id)
