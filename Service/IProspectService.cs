@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-   public  interface IShoppingCartService : IService<ShoppingCart>
+    public interface IProspectService : IService<Prospect>
     {
-         void setIdPanier();
     }
 }

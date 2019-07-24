@@ -17,5 +17,30 @@ namespace Service
         {
 
         }
+
+        public void setIdPanier()
+        {
+            IClientService AS = new ClientService();
+
+            List<Client> ListClient = new List<Client>();
+            foreach (var item in AS.GetAll())
+            {
+                Client A = new Client();
+                A.id = item.id;
+
+                ListClient.Add(A);
+            }
+
+            var req = from i in ListClient  select i.id;
+            int lastId = req.Max();
+
+            Client WithCart = AS.GetById(lastId);
+            WithCart.idPanier = WithCart.id;
+
+
+            AS.Update(WithCart);
+            AS.Commit();
+           
+        }
     }
 }

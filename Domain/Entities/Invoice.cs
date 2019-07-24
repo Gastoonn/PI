@@ -12,7 +12,7 @@ namespace Domain.Entities
         [Key]
         public int Id { get; set; }
         public float Total { get; set; }
-        [DataType(DataType.DateTime)]
+       // [DataType(DataType.DateTime)]
         public DateTime Date_invoice { get; set; }
     }
 }
