@@ -15,15 +15,15 @@ namespace WebClient.Controllers
         // GET: ShoppingCart
         public ActionResult Index()
         {
-            List<ShoppingCartModel> list = new List<ShoppingCartModel>();
+            List<ShoppingCart> list = new List<ShoppingCart>();
             foreach (var item in ShoppingCartService.GetAll())
             {
-                ShoppingCartModel AVM = new ShoppingCartModel();
+                ShoppingCart AVM = new ShoppingCart();
                 AVM.Id = item.Id;
                 AVM.idQuotation = item.idQuotation;
                 AVM.idCLient = item.idCLient;
-                AVM.ListProductModel = item.ListProduct;
-                AVM.ListPackModel = item.ListPack;
+                AVM.ListProduct = item.ListProduct;
+                AVM.ListPack = item.ListPack;
                 list.Add(AVM);
             }
             return View(list);
@@ -34,12 +34,12 @@ namespace WebClient.Controllers
         {
             ShoppingCart item = ShoppingCartService.GetById(id);
 
-            ShoppingCartModel AVM = new ShoppingCartModel();
+            ShoppingCart AVM = new ShoppingCart();
             AVM.Id = item.Id;
             AVM.idQuotation = item.idQuotation;
             AVM.idCLient = item.idCLient;
-            AVM.ListProductModel = item.ListProduct;
-            AVM.ListPackModel = item.ListPack;
+            AVM.ListProduct = item.ListProduct;
+            AVM.ListPack = item.ListPack;
 
             return View(AVM);
         }
@@ -81,12 +81,12 @@ namespace WebClient.Controllers
         {
             ShoppingCart item = ShoppingCartService.GetById(id);
 
-            ShoppingCartModel AVM = new ShoppingCartModel();
+            ShoppingCart AVM = new ShoppingCart();
             AVM.Id = item.Id;
             AVM.idQuotation = item.idQuotation;
             AVM.idCLient = item.idCLient;
-            AVM.ListProductModel = item.ListProduct;
-            AVM.ListPackModel = item.ListPack;
+            AVM.ListProduct = item.ListProduct;
+            AVM.ListPack = item.ListPack;
 
             return View(AVM);
         }
@@ -126,12 +126,12 @@ namespace WebClient.Controllers
         {
             ShoppingCart item = ShoppingCartService.GetById(id);
 
-            ShoppingCartModel AVM = new ShoppingCartModel();
+            ShoppingCart AVM = new ShoppingCart();
             AVM.Id = item.Id;
             AVM.idQuotation = item.idQuotation;
             AVM.idCLient = item.idCLient;
-            AVM.ListProductModel = item.ListProduct;
-            AVM.ListPackModel = item.ListPack;
+            AVM.ListProduct = item.ListProduct;
+            AVM.ListPack = item.ListPack;
 
             return View(AVM);
         }

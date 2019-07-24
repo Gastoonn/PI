@@ -15,10 +15,10 @@ namespace WebClient.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            List<ProductViewModel> list = new List<ProductViewModel>();
+            List<Product> list = new List<Product>();
             foreach (var item in ProductService.GetAll())
             {
-                ProductViewModel AVM = new ProductViewModel();
+                Product AVM = new Product();
                 AVM.Id = item.Id;
                 AVM.Model = item.Model;
                 AVM.Category = item.Category;
@@ -35,7 +35,7 @@ namespace WebClient.Controllers
         {
             Product item = ProductService.GetById(id);
 
-            ProductViewModel AVM = new ProductViewModel();
+            Product AVM = new Product();
             AVM.Id = item.Id;
             AVM.Model = item.Model;
             AVM.Category = item.Category;
@@ -80,7 +80,7 @@ namespace WebClient.Controllers
         public ActionResult Edit(int id)
         {
             Product item = ProductService.GetById(id);
-            ProductViewModel AVM = new ProductViewModel();
+            Product AVM = new Product();
             AVM.Id = item.Id;
             AVM.Model = item.Model;
             AVM.Category = item.Category;
@@ -92,7 +92,7 @@ namespace WebClient.Controllers
 
         // POST: Product/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, ProductViewModel AVM)
+        public ActionResult Edit(int id, Product AVM)
         {
             try
             {
@@ -119,7 +119,7 @@ namespace WebClient.Controllers
         public ActionResult Delete(int id)
         {
             Product item = ProductService.GetById(id);
-            ProductViewModel AVM = new ProductViewModel();
+            Product AVM = new Product();
             AVM.Id = item.Id;
             AVM.Model = item.Model;
             AVM.Category = item.Category;

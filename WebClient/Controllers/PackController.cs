@@ -15,14 +15,14 @@ namespace WebClient.Controllers
         // GET: Pack
         public ActionResult Index()
         {
-            List<PackViewModel> list = new List<PackViewModel>();
+            List<Pack> list = new List<Pack>();
             foreach (var item in PackService.GetAll())
             {
-                PackViewModel AVM = new PackViewModel();
+                Pack AVM = new Pack();
                 AVM.Id = item.Id;
                 AVM.date_deb = item.date_deb;
                     AVM.date_expiration = item.date_expiration;
-                AVM.ListPanierModel = item.ListPanier;
+                AVM.ListPanier = item.ListPanier;
                 AVM.ListProduct = item.ListProduct;
                 AVM.Price = item.Price;
                    
@@ -37,11 +37,11 @@ namespace WebClient.Controllers
         {
             Pack item = PackService.GetById(id);
 
-            PackViewModel AVM = new PackViewModel();
+            Pack AVM = new Pack();
             AVM.Id = item.Id;
             AVM.date_deb = item.date_deb;
             AVM.date_expiration = item.date_expiration;
-            AVM.ListPanierModel = item.ListPanier;
+            AVM.ListPanier = item.ListPanier;
             AVM.ListProduct = item.ListProduct;
             AVM.Price = item.Price;
 
@@ -84,11 +84,11 @@ namespace WebClient.Controllers
         public ActionResult Edit(int id)
         {
             Pack item = PackService.GetById(id);
-            PackViewModel AVM = new PackViewModel();
+            Pack AVM = new Pack();
             AVM.Id = item.Id;
             AVM.date_deb = item.date_deb;
             AVM.date_expiration = item.date_expiration;
-            AVM.ListPanierModel = item.ListPanier;
+            AVM.ListPanier = item.ListPanier;
             AVM.ListProduct = item.ListProduct;
             AVM.Price = item.Price;
 
@@ -97,7 +97,7 @@ namespace WebClient.Controllers
 
         // POST: Pack/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, PackViewModel AVM)
+        public ActionResult Edit(int id, Pack AVM)
         {
             try
             {
@@ -106,7 +106,7 @@ namespace WebClient.Controllers
                 A.Id = AVM.Id;
                 A.date_deb = AVM.date_deb;
                 A.date_expiration = AVM.date_expiration;
-                A.ListPanier = AVM.ListPanierModel;
+                A.ListPanier = AVM.ListPanier;
                 A.ListProduct = AVM.ListProduct;
                 A.Price = AVM.Price;
 
@@ -125,11 +125,11 @@ namespace WebClient.Controllers
         public ActionResult Delete(int id)
         {
             Pack item = PackService.GetById(id);
-            PackViewModel AVM = new PackViewModel();
+            Pack AVM = new Pack();
             AVM.Id = item.Id;
             AVM.date_deb = item.date_deb;
             AVM.date_expiration = item.date_expiration;
-            AVM.ListPanierModel = item.ListPanier;
+            AVM.ListPanier = item.ListPanier;
             AVM.ListProduct = item.ListProduct;
             AVM.Price = item.Price;
 
